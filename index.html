@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <title>p2p Chat</title>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link href="styles/site.css" rel=stylesheet>
+  </head>
+  <body>
+    <main>
+      <section class=signature>
+        <h2>your eduCoin id (ECDSA key)</h2>
+  
+        <div class=form-group>        
+          <label for=public>your public key</label>
+          <textarea class=public placeholder="public key"></textarea>
+        </div>
+  
+        <div class=form-group>
+          <label for=private>your private key</label>
+          <textarea class=private placeholder="private key"></textarea>
+        </div>
+  
+        <p>Please save these data so you can reconnect with the same details. This
+          will be important once you post your first data to class!
+        </p>
+  
+        <div class=form-group>
+          <input name=name placeholder="name">
+        </div>
+  
+        <div class=form-group>
+          <button class=attend>Attend class with these credentials</button>      
+        </div>
+      </section>
+
+      <section class="class">
+        <nav>
+          <ul class=tabs>
+            <li class=brand>P2P Peer Review</li>
+            <li class="nav peers">Connected Peers</li>
+            <li class="nav post-question">Question</li>
+            <li class="nav post-answer">Answer</li>
+            <li class="nav review">Review</li>
+            <li class="nav p2p-tx">P2P Tx</li>
+            <li class="nav grades">Grades</li>
+          </ul>
+        </nav>
+  
+        <section class="view peers">
+          <h1>Connected Peers</h1>
+          <div class=p2p-graph></div>
+        </section>
+  
+        <section class=attendee>
+          <div class="view post-question">
+            <h1>Post a Question</h1>
+            <div class=form-group>
+              <input name=question-title placeholder="title">
+            </div>
+            <div class=form-group>
+              <textarea class=question placeholder="question"></textarea>
+            </div>
+  
+            <div class=form-group>
+              <input name=question-due placeholder="due">
+              <button class=generate-question-due-date>Reset</button>
+            </div>
+
+            <p>we could add rubric criteria here, with relative points, and later in review apply the rubric. for now, we will hard code a single numeric evaluation</p>
+  
+            <button class=submit-question>submit</button>
+          </div>
+  
+          <div class="view post-answer">
+            <h1>Answer a Question</h1>
+            <select class=answer-questions-user></select>
+            <select class=answer-questions></select>
+            <blockquote class=question-to-answer></blockquote>
+  
+            <div class=form-group>
+              <input name=answer-title placeholder="title">
+            </div>
+            <div class=form-group>
+              <textarea class=answer placeholder="answer"></textarea>
+            </div>
+  
+            <button class=submit-answer>submit</button>
+          </div>
+  
+          <div class="view review">
+            <h1>Review an Answer</h1>
+            <select class=review-questions></select>
+            <blockquote class=question-answered></blockquote>
+            <select class=review-answers></select>
+            <blockquote class=answer-to-review></blockquote>
+  
+            <div class=form-group>
+              <textarea class=review placeholder="review"></textarea>
+            </div> 
+            <div class=form-group>
+              <label for=numeric-evaluation>Score:</label>
+              <input name=numeric-evaluation type=number min=0 max=4></input>              
+            </div>
+  
+            <button class=submit-review>submit</button>          
+          </div>
+        </section>
+
+        <section class="view grades">
+          <h1>Student Scores</h1>
+          <ul class=student-scores></ul>
+        </section>
+  
+        <section class="view p2p-tx">
+          <h1>P2P Tx Log</h1>
+          <ul class=p2p-log></ul>
+        </section>      
+      </section>
+    </main>
+      
+    <div class=modal>
+      <div class=dialog>
+        <p class=message></p>
+        <div class=form-group>
+          <button class=acknowledge>Okay</button>
+        </div>    
+      </div>
+    </div>  
+
+  </body>
+</html>

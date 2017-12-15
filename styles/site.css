@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:200,200i,800|Bitter|Oxygen');
+
+:root {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10pt;
+  font-weight: 200;
+}
+
+html {
+  height: 100%
+}
+html, body, main {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+body, main {
+  flex: 1;
+}
+
+button, input {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 11pt;
+}
+
+ul { 
+  padding: 0;
+  list-style: none;
+}
+
+nav {
+  margin-top: -2em;
+  width: 100vw; 
+  background-color: black;
+  color: white;
+}
+nav > ul {
+  display: flex;
+  flex-direction: row;
+}
+nav > ul > li:not(.active) {
+  cursor: pointer;
+}
+nav > ul > li {
+  padding: 1em;  
+}
+nav > ul > li:not(.active):hover {
+  background-color: grey;
+}
+
+.signature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+blockquote {
+  font-size: 1.5em
+}
+
+textarea[name=class-description] {
+  width: 100%;
+}
+
+.form-group {
+  margin: 1em
+}
+
+.modal {
+  position: fixed;
+  background: rgba(0,0,0,0.4);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog {
+  background: white;
+  padding: 1em;
+  border-radius: 0.1em;
+  box-shadow: rgba(0,0,0,0.5) 0px 0px 8px 0px;
+}
+
+.acknowledge {
+  float: right
+}
+
+main {
+  align-items: center;
+  background-color: whitesmoke;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.p2p-graph {
+  margin-bottom: 1em;
+  width: 50vw;
+  max-width: 50vw;
+  border-radius: 0.3em;
+  background-color: slategrey
+}
+
+.brand {
+  font-weight: 900;
+}
+
+[hidden] { display: none; }
